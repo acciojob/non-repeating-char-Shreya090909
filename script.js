@@ -1,13 +1,22 @@
-function firstNonRepeatedChar(str) {
-  const charCount = {};
-  for (let char of str) {
-    charCount[char] = (charCount[char] || 0) + 1;
-  }
-  for (let char of str) {
-    if (charCount[char] === 1) {
-      return char;
+function firstNonRepeatedChar(a) {
+	for(let i=0;i<a.lenth;i++)
+		{
+			let check=true;
+			for(let j=0;j<a.length;j++)
+				{
+					if(i!=j&& a[j])
+					{
+						check=false;
+						break;
+					}
+				}
+		if(check==true)
+		{
+			return a[i]
+		}
+
     }
-  }
+  
   return null;
 }
 
